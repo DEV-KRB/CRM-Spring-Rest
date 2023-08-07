@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "c955ab32-fc56-43e9-9bfe-214456fa112d",
+		"name": "CRM_SpringRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "14298786"
+	},
+	"item": [
+		{
+			"name": "Get all Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/crm-rest/api/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Individual customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/crm-rest/api/customers/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Soundarya\",\r\n    \"lastName\": \"Jagtap\",\r\n    \"email\": \"guria@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/crm-rest/api/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "Update existing Customer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":7,\r\n    \"firstName\": \"Soundarya\",\r\n    \"lastName\": \"Jagtap\",\r\n    \"email\": \"soundaryajagtap@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/crm-rest/api/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":7,\r\n    \"firstName\": \"Soundarya\",\r\n    \"lastName\": \"Jagtap\",\r\n    \"email\": \"soundaryajagtap@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/crm-rest/api/customers/7"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete any customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":7,\r\n    \"firstName\": \"Soundarya\",\r\n    \"lastName\": \"Jagtap\",\r\n    \"email\": \"soundaryajagtap@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/crm-rest/api/customers/78787",
+				"description": "put any id either \"Integer\" or \"String\" you will not get error infact you will get a custom exception created by the developer."
+			},
+			"response": []
+		}
+	]
+}
